@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Marketoza | Modern Shopping</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker__item">🔥 <b>FLASH SALE:</b> 50% Off on Summer Collection</div>
+            <div class="ticker__item">🚀 Free Shipping on Orders over ৳5000</div>
+            <div class="ticker__item">💎 New Arrivals Dropping Every Friday</div>
+            <div class="ticker__item">✨ Use Code: <b>MARKETOZA2024</b> for extra discount!</div>
+            <div class="ticker__item">📞 Call us: +880 1234 567890</div>
+            <div class="ticker__item">🔥 <b>FLASH SALE:</b> 50% Off on Summer Collection</div>
+            <div class="ticker__item">🚀 Free Shipping on Orders over ৳5000</div>
+            <div class="ticker__item">💎 New Arrivals Dropping Every Friday</div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html#hero" class="logo">
+                    <img src="img/logo.png" alt="Hey Marketoza Logo">
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#new-arrivals">New</a></li>
+                    <li><a class="shop-trigger" href="shop.html">Shop</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="header-icons">
+                    <div class="auth-btn-group" id="auth-guest">
+                        <button class="icon-btn" onclick="window.location.href='login.html'" title="Login">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </button>
+                        </div>
+                    
+                    <div class="auth-btn-group" id="auth-user" style="display: none;">
+                        <button class="icon-btn" onclick="window.location.href='dashboard.html'" title="Dashboard">
+                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </button>
+                          <button class="icon-btn" onclick="logout()" title="Logout">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                        </button>
+                    </div>
+
+                    <button class="icon-btn search-btn" onclick="openSearchModal()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                    
+                    </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" style="padding: 0;">
+        <div id="heroCarousel" class="carousel slide hero-slider" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false">
+            
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80" class="hero-bg-img" alt="Fashion">
+                    <div class="hero-overlay-content">
+                        <h1>New Season<br>New Style.</h1>
+                        <p>Discover the latest trends in fashion with our exclusive summer collection. Premium quality, unbeatable prices.</p>
+                        <a href="shop.html" class="btn-hero" style="cursor: pointer;">Start Shopping</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1555529771-835f59fc5eb9?auto=format&fit=crop&w=1600&q=80" class="hero-bg-img" alt="Tech">
+                    <div class="hero-overlay-content">
+                        <h1>Next Gen<br>Gadgets.</h1>
+                        <p>Upgrade your lifestyle with our cutting-edge tech accessories. Smartwatches, headphones, and more.</p>
+                        <a href="shop.html" class="btn-hero" style="cursor: pointer;">Explore Tech</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80" class="hero-bg-img" alt="Winter">
+                    <div class="hero-overlay-content">
+                        <h1>Exclusive<br>Winter Sale.</h1>
+                        <p>Get up to 50% off on selected items. Limited time offer. Grab your favorites before they are gone.</p>
+                        <a href="shop.html" class="btn-hero" style="cursor: pointer;">View Deals</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    
+    <section id="new-arrivals" class="new-arrivals reveal section-padding">
+        <div class="container">
+            <h2 class="section-title">New Arrivals</h2>
+            
+            <button class="slide-btn prev-btn" onclick="slideLeft()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="slide-btn next-btn" onclick="slideRight()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <div class="scroll-container" id="newArrivalsGrid">
+            </div>
+        </div>
+    </section>
+
+    <section id="categories" class="categories reveal section-padding">
+        <div class="container">
+            <h2 class="section-title">Browse Categories</h2>
+            <div class="cat-grid" id="categoryGrid">
+                </div>
+        </div>
+    </section>
+
+    <section id="products" class="products reveal section-padding">
+        <div class="container">
+            <h2 class="section-title">Hey Marketoza Trends</h2>
+            
+            <div class="shop-wrapper">
+                
+                <aside class="shop-sidebar">
+                    <div class="sidebar-title">Categories</div>
+                    <ul class="sidebar-menu">
+                        <li><a href="#" class="active" onclick="filterCat('All')">All Products <span>&rarr;</span></a></li>
+                        <li><a href="#" onclick="filterCat('Clothing')">Clothing <span>3</span></a></li>
+                        <li><a href="#" onclick="filterCat('Watches')">Watches <span>1</span></a></li>
+                        <li><a href="#" onclick="filterCat('Sneakers')">Sneakers <span>2</span></a></li>
+                        <li><a href="#" onclick="filterCat('Gadgets')">Gadgets <span>2</span></a></li>
+                        <li><a href="#" onclick="filterCat('Accessories')">Accessories <span>1</span></a></li>
+                    </ul>
+
+                    <div class="filter-group">
+                        <div class="sidebar-title">Price Range</div>
+                        <div style="font-size: 0.9rem; color: #64748b; display:flex; justify-content:space-between">
+                            <span>৳0</span>
+                            <span>৳15,000</span>
+                        </div>
+                        <div class="price-range">
+                            <div class="price-fill"></div>
+                        </div>
+                        <button class="filter-btn">Filter Price</button>
+                    </div>
+                </aside>
+
+                <div class="products-content">
+                    <div class="product-grid" id="productGrid">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <section class="shop-look-section reveal section-padding" id="shopLookSection">
+        <div class="container">
+            <h2 class="section-title">Shop By Look</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: #64748b;">Click the dots to see product details</p>
+            
+            <div class="look-container">
+                <div class="look-image-col">
+                    <img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?auto=format&fit=crop&w=800&q=80" class="look-main-img" alt="Shop The Look">
+                    
+                    <div class="look-hotspot" style="top: 35%; left: 45%;" onclick="viewProduct(101)" title="T-Shirt"></div>
+                    <div class="look-hotspot" style="top: 25%; left: 55%;" onclick="viewProduct(104)" title="Headphones"></div>
+                    <div class="look-hotspot" style="top: 80%; left: 70%;" onclick="viewProduct(103)" title="Pants"></div>
+                </div>
+                
+                <div class="look-products-col" id="shopLookProducts">
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="concern-section" class="concern-section reveal section-padding">
+        <div class="container">
+            <h2 style="font-weight: 400; color: #64748b; font-size: 1.2rem; margin-bottom:0.5rem">SHOP BY</h2>
+            <h2 class="section-title" style="margin-bottom: 2rem">INTEREST</h2>
+            
+            <div class="concern-head-tabs" id="concernTabs">
+                </div>
+
+            <p style="margin-bottom: 2rem; color: #64748b;">Select a category below to filter products.</p>
+
+            <div class="concern-tags" id="concernTags">
+                </div>
+
+            <div class="concern-grid-wrapper">
+                 <button class="slide-btn prev-btn" onclick="slideConcernLeft()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                 </button>
+                 <button class="slide-btn next-btn" onclick="slideConcernRight()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                 </button>
+
+                 <div class="scroll-container" id="concernProductGrid">
+                    </div>
+             </div>
+        </div>
+    </section>
+     <section id="features" class="features reveal section-padding">
+        <div class="container">
+            <h2 class="section-title" style="color: white; border-color: white;">Why Hey Marketoza?</h2>
+            <div class="feature-grid">
+                <div class="feature-item stagger-delay reveal">
+                    <i>🚀</i>
+                    <h3>Fast Delivery</h3>
+                    <p>Get your products delivered within 24 hours anywhere in the city.</p>
+                </div>
+                <div class="feature-item stagger-delay reveal">
+                    <i>🛡️</i>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure payment with 256-bit encryption technology.</p>
+                </div>
+                <div class="feature-item stagger-delay reveal">
+                    <i>↩️</i>
+                    <h3>Easy Returns</h3>
+                    <p>Not satisfied? Return it within 30 days for a full refund.</p>
+                </div>
+                <div class="feature-item stagger-delay reveal">
+                    <i>🎧</i>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is here to help you anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">Hey Marketoza</span>
+            <div style="margin-bottom: 1rem">
+                <a href="#" style="margin: 0 10px">Instagram</a>
+                <a href="#" style="margin: 0 10px">Twitter</a>
+                <a href="#" style="margin: 0 10px">Facebook</a>
+            </div>
+            
+            <div class="footer-links-grid">
+                <a onclick="openFullPage('about')">About Us</a>
+                <a onclick="openFullPage('privacy')">Privacy Policy</a>
+                <a onclick="openFullPage('terms')">Terms and Conditions</a>
+                <a onclick="openFullPage('disclaimer')">Disclaimer</a>
+                <a onclick="openFullPage('pages')">Our Pages</a>
+            </div>
+
+            <p>&copy; 2024 Hey Marketoza Inc. All rights reserved.</p>
+            <p class="footer-credit" style="font-size: 0.8rem; margin-top: 10px;">Developed by <a href="https://www.ositandweb.com" target="_blank">www.ositandweb.com</a></p>
+        </div>
+    </footer>
+
+    <nav class="sticky-menu">
+        <button class="sticky-btn" onclick="window.scrollTo(0,0)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            Home
+        </button>
+
+        <button class="sticky-btn" onclick="window.location.href='shop.html'">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+            Shop
+        </button>
+        
+        <button class="sticky-btn" onclick="toggleMenu()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            Menu
+        </button>
+        
+        <button class="sticky-btn" onclick="toggleCart()" style="position: relative;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            Cart
+            <span class="badge-mobile" id="mobileCartCount">0</span>
+        </button>
+    </nav>
+
+    <div class="overlay" id="globalOverlay" onclick="closeAllDrawers()"></div>
+
+    <div class="drawer left" id="menuDrawer">
+        <div class="cart-header" style="padding-bottom: 0.5rem; border-bottom: none;">
+            <h3>Menu</h3>
+            <button onclick="closeAllDrawers()" style="background:none; font-size: 1.5rem; width: 30px; height: 30px;">&times;</button>
+        </div>
+        
+        <div class="drawer-tabs">
+            <button class="tab-btn active" id="btn-menu" onclick="switchTab('menu')">Menu</button>
+            <button class="tab-btn" id="btn-cats" onclick="switchTab('cats')">Categories</button>
+        </div>
+
+        <div class="cart-body" style="padding-top: 1rem;">
+            
+            <div id="tab-menu" class="tab-content active">
+                <div class="menu-list">
+                    <a href="login.html" style="color: var(--primary);">Login / Register <span>&rarr;</span></a>
+                    
+                    <a href="#hero" onclick="closeAllDrawers()">Home <span>&rarr;</span></a>
+                    <a href="shop.html" style="cursor: pointer;">Shop All <span>&rarr;</span></a>
+                    <a href="#new-arrivals" onclick="closeAllDrawers()">New Arrivals <span>&rarr;</span></a>
+                    <a href="contact.html">Contact Us <span>&rarr;</span></a>
+                    <a onclick="openFullPage('about'); closeAllDrawers()">About Us <span>&rarr;</span></a>
+                    <a onclick="openFullPage('privacy'); closeAllDrawers()">Privacy Policy <span>&rarr;</span></a>
+                </div>
+            </div>
+
+            <div id="tab-cats" class="tab-content">
+                <div class="menu-list">
+                    <a href="#" onclick="filterCat('Clothing'); closeAllDrawers()">Clothing <span>&rarr;</span></a>
+                    <a href="#" onclick="filterCat('Watches'); closeAllDrawers()">Watches <span>&rarr;</span></a>
+                    <a href="#" onclick="filterCat('Sneakers'); closeAllDrawers()">Sneakers <span>&rarr;</span></a>
+                    <a href="#" onclick="filterCat('Gadgets'); closeAllDrawers()">Gadgets <span>&rarr;</span></a>
+                    <a href="#" onclick="filterCat('Accessories'); closeAllDrawers()">Accessories <span>&rarr;</span></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="drawer" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Bag</h3>
+            <button onclick="closeAllDrawers()" style="background:none; font-size: 1.5rem; width: 30px; height: 30px;">&times;</button>
+        </div>
+        <div class="cart-body" id="cartItems">
+        </div>
+        <div class="cart-footer">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-weight: bold; font-size: 1.2rem;">
+                <span>Total:</span>
+                <span id="cartTotal">৳0.00</span>
+            </div>
+            <button class="btn btn-primary" style="width: 100%" onclick="openCheckout()">Checkout Now</button>
+        </div>
+    </div>
+
+    <div class="info-modal" id="searchModal">
+        <div class="info-content auth-form">
+            <button class="close-info" onclick="closeSearchModal()">&times;</button>
+            <h2>Search Product</h2>
+            <form onsubmit="event.preventDefault(); performSearch()">
+                <div class="search-input-container">
+                    <input type="text" id="searchInput" class="search-field" placeholder="Type name, category..." required>
+                </div>
+                <button class="btn btn-primary" style="width:100%; margin-top: 10px;">Search Now</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="checkout-modal" id="fullPageModal">
+        <div class="checkout-header">
+            <h3 id="fullPageTitle">Page Title</h3>
+            <button onclick="closeFullPage()" style="background: #f1f5f9; width: 40px; height: 40px; border-radius: 50%; font-size: 1.5rem;">&times;</button>
+        </div>
+        <div class="container" style="padding: 0;">
+            <div class="full-page-content" id="fullPageContent">
+                </div>
+        </div>
+    </div>
+
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-header">
+            <h3>Secure Checkout</h3>
+            <button onclick="closeCheckout()" style="background: #f1f5f9; width: 40px; height: 40px; border-radius: 50%; font-size: 1.5rem;">&times;</button>
+        </div>
+        <div class="checkout-container">
+            <div class="checkout-form">
+                <form id="orderForm" onsubmit="event.preventDefault(); placeOrder()">
+                    <div style="margin-bottom: 1rem;">
+                        <label>Full Name</label>
+                        <input type="text" id="custName" placeholder="Enter your full name" required>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label>Mobile Number</label>
+                        <input type="tel" id="custPhone" placeholder="01XXX-XXXXXX" required>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label>Full Address</label>
+                        <textarea id="custAddr" rows="3" placeholder="House, Road, Area, City" required></textarea>
+                    </div>
+
+                    <label style="margin-top: 1.5rem">Delivery Area</label>
+                    <div class="delivery-option" onclick="selectDelivery(100, this)">
+                        <input type="radio" name="delivery" id="dhakaIn" checked>
+                        <div>
+                            <div style="font-weight: 700;">Inside Dhaka</div>
+                            <div style="font-size: 0.85rem; color: #64748b;">Delivery Charge: ৳100</div>
+                        </div>
+                    </div>
+                    <div class="delivery-option" onclick="selectDelivery(150, this)">
+                        <input type="radio" name="delivery" id="dhakaOut">
+                        <div>
+                            <div style="font-weight: 700;">Outside Dhaka</div>
+                            <div style="font-size: 0.85rem; color: #64748b;">Delivery Charge: ৳150</div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Confirm Order</button>
+                </form>
+            </div>
+            
+            <div class="checkout-summ">
+                <h4 style="margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #e2e8f0;">Order Summary</h4>
+                
+                <div id="coItemsList" class="co-item-list">
+                    </div>
+
+                <div class="summ-row">
+                    <span>Subtotal</span>
+                    <span id="coSubtotal">৳0</span>
+                </div>
+                <div class="summ-row">
+                    <span>Delivery Fee</span>
+                    <span id="coDelivery">৳100</span>
+                </div>
+                <div class="summ-row summ-total">
+                    <span>Grand Total</span>
+                    <span id="coTotal">৳0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
